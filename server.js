@@ -6,7 +6,7 @@ app.use(express.json());  // Enable JSON parsing for incoming requests
 
 // Database connection pool
 const pool = mariadb.createPool({
-    host: '34.59.5.180',
+    host: '127.0.0.0',
     user: 'dbuser',
     password: 'dbpassword',
     database: 'userdb',
@@ -67,7 +67,7 @@ app.post('/clear', async (req, res) => {
 });
 
 // Start the server
-const PORT = 8080;
+const PORT = 80;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
