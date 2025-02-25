@@ -6,7 +6,7 @@ app.use(express.json());  // Enable JSON parsing for incoming requests
 
 // Database connection pool
 const pool = mariadb.createPool({
-    host: '127.0.0.1',
+    host: '34.59.5.180',
     user: 'dbuser',
     password: 'dbpassword',
     database: 'userdb',
