@@ -2,18 +2,17 @@ const express = require('express');
 const mariadb = require('mariadb');
 
 const app = express();
-app.use(express.json());  // Enable JSON parsing for incoming requests
+app.use(express.json());  
 
-// Database connection pool
 const pool = mariadb.createPool({
-    host: '127.0.0.0',
+    host: '127.0.0.1',
     user: 'dbuser',
     password: 'dbpassword',
     database: 'userdb',
     connectionLimit: 5
 });
 
-// Greeting route (from Task 1)
+// Greeting route 
 app.get('/greeting', (req, res) => {
     res.send('<h1>Hello World!</h1>');
 });
